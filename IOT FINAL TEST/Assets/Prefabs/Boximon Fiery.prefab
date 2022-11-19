@@ -82,7 +82,7 @@ MonoBehaviour:
   nocturno: 1
   health: 100
   actualLight: {fileID: 0}
-  damage: 50
+  damage: 60
   lifeBar: {fileID: 9036408080939194247}
 --- !u!114 &9034433232188498832
 MonoBehaviour:
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e0d8308231e4a04aba0bdebf56fb137, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 40
+  movementSpeed: 15
   walking: 1
 --- !u!65 &8060195346070654073
 BoxCollider:

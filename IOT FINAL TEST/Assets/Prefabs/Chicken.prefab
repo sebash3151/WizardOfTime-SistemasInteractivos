@@ -377,7 +377,6 @@ GameObject:
   m_Component:
   - component: {fileID: 983908580718669570}
   - component: {fileID: 882968558533905606}
-  - component: {fileID: 7167253878355875582}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Untagged
@@ -458,19 +457,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.05975446, y: 0.29037213, z: -0.0017941594}
     m_Extent: {x: 0.984365, y: 0.9217851, z: 0.7955381}
   m_DirtyAABB: 0
---- !u!65 &7167253878355875582
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 984858676481580772}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5910769, y: 1.850515, z: 1.9752324}
-  m_Center: {x: 0.0017941742, y: 0.5690679, z: 0.4496667}
 --- !u!1 &985489914474697938
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,6 +529,7 @@ GameObject:
   - component: {fileID: 935921399197170662}
   - component: {fileID: 985770088107427655}
   - component: {fileID: 985770088107427648}
+  - component: {fileID: 3931532297069761104}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Enemy
@@ -601,7 +588,7 @@ MonoBehaviour:
   nocturno: 0
   health: 100
   actualLight: {fileID: 0}
-  damage: 40
+  damage: 60
   lifeBar: {fileID: 984383981135393661}
 --- !u!114 &985770088107427648
 MonoBehaviour:
@@ -617,6 +604,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 20
   walking: 1
+--- !u!65 &3931532297069761104
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985770088107427654}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5910769, y: 1.850515, z: 1.9752324}
+  m_Center: {x: 0.0017941742, y: 0.5690679, z: 0.4496667}
 --- !u!1 &986037595715322678
 GameObject:
   m_ObjectHideFlags: 0

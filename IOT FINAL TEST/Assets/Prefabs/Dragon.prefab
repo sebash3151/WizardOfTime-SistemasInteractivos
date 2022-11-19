@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 6707170033496128910}
   - component: {fileID: 6647519417232144473}
   - component: {fileID: 6647519417232144454}
+  - component: {fileID: 4039289182211587318}
   m_Layer: 0
   m_Name: Dragon
   m_TagString: Enemy
@@ -191,7 +192,7 @@ MonoBehaviour:
   nocturno: 0
   health: 100
   actualLight: {fileID: 0}
-  damage: 1
+  damage: 15
   lifeBar: {fileID: 6648800878376811234}
 --- !u!114 &6647519417232144454
 MonoBehaviour:
@@ -205,8 +206,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e0d8308231e4a04aba0bdebf56fb137, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
+  movementSpeed: 2
   walking: 1
+--- !u!65 &4039289182211587318
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6647519417232144472}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.1322985, y: 2.2366765, z: 3.2144058}
+  m_Center: {x: 0.000000020620469, y: 0.42593315, z: 0.34778523}
 --- !u!1 &6647630642524474842
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,7 +323,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6650390099621475712}
   - component: {fileID: 6749790401778162350}
-  - component: {fileID: 6647740182687623613}
   m_Layer: 0
   m_Name: Dragon
   m_TagString: Enemy
@@ -399,19 +412,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.19694847, y: 0.13214013, z: 0}
     m_Extent: {x: 1.5594974, y: 1.0457672, z: 1.566148}
   m_DirtyAABB: 0
---- !u!65 &6647740182687623613
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6647740182687623612}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.1322985, y: 2.2366765, z: 3.2144058}
-  m_Center: {x: 0.000000020620469, y: 0.42593315, z: 0.34778523}
 --- !u!1 &6647757892519367740
 GameObject:
   m_ObjectHideFlags: 0
