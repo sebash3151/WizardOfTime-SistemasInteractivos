@@ -39,10 +39,8 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("colisiion");
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log("auch");
             GetHit();
         }
     }

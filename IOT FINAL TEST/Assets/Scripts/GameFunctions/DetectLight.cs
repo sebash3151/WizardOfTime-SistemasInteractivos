@@ -43,8 +43,7 @@ public class DetectLight : MonoBehaviour
                 }
                        
             }
-        }
-        
+        }       
 
         texto.text = lightLevel.ToString();
 
@@ -107,9 +106,26 @@ public class DetectLight : MonoBehaviour
                 foco.text = "Dia";
                 audio.Play();
             }
-        }
-        
+        }      
+    }
 
+    public void ChangeDay()
+    {
+        anim.SetTrigger("Change");
+        night = false;
+        day = true;
+        dawn = false;
+        foco.text = "Dia";
+        audio.Play();
+    }
 
+    public void ChangeNight()
+    {
+        anim.SetTrigger("Change");
+        night = true;
+        day = false;
+        dawn = false;
+        foco.text = "Noche";
+        audio.Play();
     }
 }
