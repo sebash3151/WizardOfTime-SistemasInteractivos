@@ -1006,6 +1006,7 @@ GameObject:
   - component: {fileID: 3752659907406958098}
   - component: {fileID: 3752659907406958097}
   - component: {fileID: 7189541107676792454}
+  - component: {fileID: 7835663234598017936}
   m_Layer: 0
   m_Name: Boximon Cyclopes
   m_TagString: Enemy
@@ -1104,6 +1105,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.616352, y: 1.2952441, z: 0.7544617}
   m_Center: {x: 0.0075166225, y: 0.63299173, z: 0.022549432}
+--- !u!114 &7835663234598017936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3752659907406958099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &3752681070445585389
 GameObject:
   m_ObjectHideFlags: 0

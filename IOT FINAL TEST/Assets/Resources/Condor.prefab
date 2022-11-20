@@ -410,6 +410,7 @@ GameObject:
   - component: {fileID: 5955192018130863953}
   - component: {fileID: 5955192018130863954}
   - component: {fileID: 97140117756202220}
+  - component: {fileID: 3060027470992679766}
   m_Layer: 0
   m_Name: Condor
   m_TagString: Enemy
@@ -497,6 +498,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.2012324, y: 1.8000374, z: 3.5959027}
   m_Center: {x: -0.000000102325586, y: 0.1892337, z: 0.6801245}
+--- !u!114 &3060027470992679766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5955192018130863952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &5955214433757331372
 GameObject:
   m_ObjectHideFlags: 0

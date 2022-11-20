@@ -958,6 +958,7 @@ GameObject:
   - component: {fileID: 801473161932846785}
   - component: {fileID: 801473161932846784}
   - component: {fileID: 2143613929}
+  - component: {fileID: 2808490898685455124}
   m_Layer: 0
   m_Name: Free Burrow
   m_TagString: Enemy
@@ -1048,6 +1049,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2651625, y: 1.1198263, z: 0.91472816}
   m_Center: {x: -0.0000013709068, y: 0.56087077, z: -0.050901413}
+--- !u!114 &2808490898685455124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3383071450786644828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &4020932518930123322
 GameObject:
   m_ObjectHideFlags: 0
