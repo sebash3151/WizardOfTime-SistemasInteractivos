@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 6647519417232144454}
   - component: {fileID: 4039289182211587318}
   - component: {fileID: -9410835125731276}
+  - component: {fileID: 3538597410514187570}
   m_Layer: 0
   m_Name: Dragon
   m_TagString: Enemy
@@ -244,6 +245,22 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &3538597410514187570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6647519417232144472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &6647630642524474842
 GameObject:
   m_ObjectHideFlags: 0
