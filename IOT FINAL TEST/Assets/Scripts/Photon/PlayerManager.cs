@@ -9,8 +9,8 @@ public class PlayerManager : MonoBehaviourPun
     public GameObject mago2;
     [SerializeField] Transform spawnPoint1;
     [SerializeField] Transform spawnPoint2;
-    [SerializeField] GameObject canvas1;
-    [SerializeField] GameObject canvas2;
+    [SerializeField] CanvasGroup canvas1;
+    [SerializeField] CanvasGroup canvas2;
 
     private void Awake()
     {
@@ -24,13 +24,17 @@ public class PlayerManager : MonoBehaviourPun
 
         if (PhotonNetwork.IsMasterClient)
         {
-            canvas1.SetActive(true);
-            canvas2.SetActive(false);
+            canvas1.alpha = 1;
+            canvas2.alpha = 0;
+            canvas1.interactable = true;
+            canvas2.interactable = false;
         }
         else
         {
-            canvas1.SetActive(false);
-            canvas2.SetActive(true);
+            canvas1.alpha = 0;
+            canvas2.alpha = 1;
+            canvas1.interactable = false;
+            canvas2.interactable = true;
         }
 
         object[] initData = new object[1];
