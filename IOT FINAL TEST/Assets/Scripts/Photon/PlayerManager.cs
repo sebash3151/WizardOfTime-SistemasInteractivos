@@ -5,8 +5,10 @@ using Photon.Pun;
 
 public class PlayerManager : MonoBehaviourPun
 {
-    public GameObject[] magos;
-    [SerializeField] Transform[] spawnPoints;
+    public GameObject mago1;
+    public GameObject mago2;
+    [SerializeField] Transform spawnPoint1;
+    [SerializeField] Transform spawnPoint2;
 
     private void Awake()
     {
@@ -15,11 +17,11 @@ public class PlayerManager : MonoBehaviourPun
 
     private void SpawnAllPlayers()
     {
-        for (int i = 0; i < magos.Length; i++)
-        {
-            Debug.Log("SE CREO");
-            PhotonNetwork.Instantiate(magos[i].name, spawnPoints[i].position, spawnPoints[i].rotation);
-        }
+        Transform spawnpoint = (PhotonNetwork.IsMasterClient) ? spawnPoint1 : spawnPoint2;
+        GameObject magos = (PhotonNetwork.IsMasterClient) ? mago1 : mago2;
+
+        PhotonNetwork.Instantiate(magos.name, spawnpoint.position, spawnpoint.rotation);
+
     }
 
 }
