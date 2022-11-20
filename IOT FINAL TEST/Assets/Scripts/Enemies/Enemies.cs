@@ -19,12 +19,12 @@ public class Enemies : MonoBehaviour
 
     void Update()
     {
-        if(nocturno && actualLight.day)
+        if(nocturno && actualLight.dayTime==1)
         {
             health -= Time.deltaTime * damage;
         }
 
-        if(!nocturno && actualLight.night)
+        if(!nocturno && actualLight.dayTime==0)
         {
             health -= Time.deltaTime * damage;
         }
