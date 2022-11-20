@@ -11,18 +11,19 @@ public class DetectLight : MonoBehaviourPunCallbacks, IPunObservable
     public bool day = false;
     public int dayTime = 0;
 
-    [SerializeField] AudioSource audio;
+    //[SerializeField] AudioSource audio;
+
     [PunRPC]
     public void ChangeDay()
     {
         dayTime = 1;
-        audio.Play();
+        //audio.Play();
     }
     [PunRPC]
     public void ChangeNight()
     {
         dayTime = 0;
-        audio.Play();
+        //audio.Play();
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)

@@ -7,8 +7,6 @@ public class GetTime : MonoBehaviour
     [SerializeField] DetectLight actualLight;
     [SerializeField] Color dia;
     [SerializeField] Material diamat;
-    [SerializeField] Color tarde;
-    [SerializeField] Material tarmat;
     [SerializeField] Color noche;
     [SerializeField] Material nochmat;
     [SerializeField] Light directionalLight;
