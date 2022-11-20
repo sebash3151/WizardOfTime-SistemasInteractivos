@@ -751,7 +751,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3472932787594844826}
   - component: {fileID: 2978291510054440459}
-  - component: {fileID: 5202310679078729982}
   m_Layer: 0
   m_Name: Burrow
   m_TagString: Untagged
@@ -853,19 +852,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.22272307, y: -0.055911213, z: 0.0000013709068}
     m_Extent: {x: 0.6295289, y: 0.43151852, z: 0.6325811}
   m_DirtyAABB: 0
---- !u!65 &5202310679078729982
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3187940569750738388}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.2651625, y: 0.86303765, z: 1.259058}
-  m_Center: {x: -0.0000013572, y: 0.047293812, z: 0.50061023}
 --- !u!1 &3259686755702626027
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,6 +957,7 @@ GameObject:
   - component: {fileID: 8311650361360958364}
   - component: {fileID: 801473161932846785}
   - component: {fileID: 801473161932846784}
+  - component: {fileID: 2143613929}
   m_Layer: 0
   m_Name: Free Burrow
   m_TagString: Enemy
@@ -1029,7 +1016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e0d8308231e4a04aba0bdebf56fb137, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
+  movementSpeed: 3
   walking: 1
 --- !u!114 &801473161932846784
 MonoBehaviour:
@@ -1046,8 +1033,21 @@ MonoBehaviour:
   nocturno: 1
   health: 100
   actualLight: {fileID: 0}
-  damage: 10
+  damage: 35
   lifeBar: {fileID: 801473161323456064}
+--- !u!65 &2143613929
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3383071450786644828}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2651625, y: 1.1198263, z: 0.91472816}
+  m_Center: {x: -0.0000013709068, y: 0.56087077, z: -0.050901413}
 --- !u!1 &4020932518930123322
 GameObject:
   m_ObjectHideFlags: 0
