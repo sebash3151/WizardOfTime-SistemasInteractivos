@@ -50,16 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifes: 3
-  heart1: {fileID: 0}
-  heart2: {fileID: 0}
-  heart3: {fileID: 0}
-  x1: {fileID: 0}
-  x2: {fileID: 0}
-  x3: {fileID: 0}
-  podercanvas: {fileID: 0}
-  lostsong: {fileID: 0}
   auch: {fileID: 2683257342421938617}
-  enemies: {fileID: 0}
 --- !u!65 &2683257342421938598
 BoxCollider:
   m_ObjectHideFlags: 0
