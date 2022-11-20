@@ -18,7 +18,7 @@ public class PlayerHealth : MonoBehaviourPunCallbacks, IPunObservable
     [SerializeField] AudioSource auch;
     [SerializeField] EnemySpawner enemies;
 
-    private void Awake()
+    private void Start()
     {
         heart1 = GameObject.Find("hearts1");
         heart2 = GameObject.Find("hearts (1)");
