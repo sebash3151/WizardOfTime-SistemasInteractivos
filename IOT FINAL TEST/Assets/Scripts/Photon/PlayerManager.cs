@@ -7,6 +7,11 @@ public class PlayerManager : MonoBehaviour
     public PlayerIDS[] players;
     public GameObject[] magos;
 
+    private void Start()
+    {
+        SpawnAllPlayers();
+    }
+
     private void SpawnAllPlayers()
     {
         for (int i = 0; i < players.Length; i++)
