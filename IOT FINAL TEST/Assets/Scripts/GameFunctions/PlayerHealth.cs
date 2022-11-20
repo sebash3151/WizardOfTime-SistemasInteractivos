@@ -7,7 +7,8 @@ using Photon.Pun;
 public class PlayerHealth : MonoBehaviourPunCallbacks, IPunObservable
 {
     [SerializeField] int lifes = 3;
-    [SerializeField] GameObject heart1;
+    [SerializeField] AudioSource auch;
+    /*[SerializeField] GameObject heart1;
     [SerializeField] GameObject heart2;
     [SerializeField] GameObject heart3;
     [SerializeField] GameObject x1;
@@ -15,7 +16,7 @@ public class PlayerHealth : MonoBehaviourPunCallbacks, IPunObservable
     [SerializeField] GameObject x3;
     [SerializeField] GameObject podercanvas;
     [SerializeField] AudioSource lostsong;
-    [SerializeField] AudioSource auch;
+    
     [SerializeField] EnemySpawner enemies;
 
     private void Start()
@@ -26,11 +27,11 @@ public class PlayerHealth : MonoBehaviourPunCallbacks, IPunObservable
         x1 = GameObject.Find("hearts (3)");
         x2 = GameObject.Find("hearts (4)");
         x3 = GameObject.Find("hearts (5)");
-    }
+    }*/
 
     private void Update()
     {
-        if (lifes == 2)
+        /*if (lifes == 2)
         {
             heart3.SetActive(false);
             x3.SetActive(true);
@@ -45,7 +46,7 @@ public class PlayerHealth : MonoBehaviourPunCallbacks, IPunObservable
             heart1.SetActive(false);
             x1.SetActive(true);
             //Perder();
-        }
+        }*/
     }
 
     private void OnTriggerEnter(Collider other)
@@ -54,14 +55,6 @@ public class PlayerHealth : MonoBehaviourPunCallbacks, IPunObservable
         {
             GetHit();
         }
-    }
-
-    private void Perder()
-    {
-        enemies.active = false;
-        lostsong.Stop();
-        podercanvas.SetActive(true);
-
     }
 
     private void GetHit()
