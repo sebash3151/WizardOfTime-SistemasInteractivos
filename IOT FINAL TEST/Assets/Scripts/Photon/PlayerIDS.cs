@@ -6,10 +6,9 @@ using Photon.Realtime;
 [Serializable]
 public class PlayerIDS
 {
-    [HideInInspector] public int playerNumber;
+    /*[HideInInspector] public int playerNumber;
     [HideInInspector] Camera camara;
     PhotonView myPhotonView;
-    [SerializeField] public Transform spawnPoint;
     [HideInInspector] public GameObject instance;
 
     void Start()
@@ -21,5 +20,5 @@ public class PlayerIDS
         {
             camara.enabled = false;
         }
-    }
+    }*/
 }

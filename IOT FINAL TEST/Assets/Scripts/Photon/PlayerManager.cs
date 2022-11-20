@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class PlayerManager : MonoBehaviour
+public class PlayerManager : MonoBehaviourPun
 {
-    public PlayerIDS[] players;
     public GameObject[] magos;
+    [SerializeField] Transform[] spawnPoints;
 
     private void Start()
     {
@@ -14,11 +15,9 @@ public class PlayerManager : MonoBehaviour
 
     private void SpawnAllPlayers()
     {
-        for (int i = 0; i < players.Length; i++)
+        for (int i = 0; i < magos.Length; i++)
         {
-            players[i].instance =
-               Instantiate(magos[i], players[i].spawnPoint.position, players[i].spawnPoint.rotation) as GameObject;
-            players[i].playerNumber = i + 1;
+            PhotonNetwork.Instantiate(magos[i].name, spawnPoints[i].position, spawnPoints[i].rotation);
         }
     }
 
