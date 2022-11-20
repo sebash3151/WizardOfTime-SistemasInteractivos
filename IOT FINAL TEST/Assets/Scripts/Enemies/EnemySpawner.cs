@@ -31,32 +31,32 @@ public class EnemySpawner : MonoBehaviour
 
     public void Spawn1()
     {
-        Instantiate(Enemies[0], Spawners[Random.Range(0, Enemies.Length)]);
+        Instantiate(Enemies[0], Spawners[Random.Range(0, Enemies.Length - 1)]);
     }
 
     public void Spawn2()
     {
-        Instantiate(Enemies[1], Spawners[Random.Range(0, Enemies.Length)]);
+        Instantiate(Enemies[1], Spawners[Random.Range(0, Enemies.Length - 1)]);
     }
 
     public void Spawn3()
     {
-        Instantiate(Enemies[2], Spawners[Random.Range(0, Enemies.Length)]);
+        Instantiate(Enemies[2], Spawners[Random.Range(0, Enemies.Length - 1)]);
     }
 
     public void Spawn4()
     {
-        Instantiate(Enemies[3], Spawners[Random.Range(0, Enemies.Length)]);
+        Instantiate(Enemies[3], Spawners[Random.Range(0, Enemies.Length - 1)]);
     }
 
     public void Spawn5()
     {
-        Instantiate(Enemies[4], Spawners[Random.Range(0, Enemies.Length)]);
+        Instantiate(Enemies[4], Spawners[Random.Range(0, Enemies.Length - 1)]);
     }
 
     public void Spawn6()
     {
-        Instantiate(Enemies[5], Spawners[Random.Range(0, Enemies.Length)]);
+        Instantiate(Enemies[5], Spawners[Random.Range(0, Enemies.Length - 1)]);
     }
 
 }
