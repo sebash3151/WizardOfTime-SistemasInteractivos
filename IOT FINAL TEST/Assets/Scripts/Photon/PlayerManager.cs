@@ -20,8 +20,10 @@ public class PlayerManager : MonoBehaviourPun
         Transform spawnpoint = (PhotonNetwork.IsMasterClient) ? spawnPoint1 : spawnPoint2;
         GameObject magos = (PhotonNetwork.IsMasterClient) ? mago1 : mago2;
 
-        PhotonNetwork.Instantiate(magos.name, spawnpoint.position, spawnpoint.rotation);
+        object[] initData = new object[1];
+        initData[0] = "Data instace";
 
+        PhotonNetwork.Instantiate(magos.name, spawnpoint.position, spawnpoint.rotation, 0, initData);
     }
 
 }
