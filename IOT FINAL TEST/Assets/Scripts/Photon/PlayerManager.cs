@@ -8,7 +8,7 @@ public class PlayerManager : MonoBehaviourPun
     public GameObject[] magos;
     [SerializeField] Transform[] spawnPoints;
 
-    private void Start()
+    private void Awake()
     {
         SpawnAllPlayers();
     }
@@ -17,6 +17,7 @@ public class PlayerManager : MonoBehaviourPun
     {
         for (int i = 0; i < magos.Length; i++)
         {
+            Debug.Log("SE CREO");
             PhotonNetwork.Instantiate(magos[i].name, spawnPoints[i].position, spawnPoints[i].rotation);
         }
     }
