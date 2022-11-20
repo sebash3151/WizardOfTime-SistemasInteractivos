@@ -29541,8 +29541,8 @@ MonoBehaviour:
   mago2: {fileID: 4191446860170286658, guid: d161d5250addb02429c907226843e2a8, type: 3}
   spawnPoint1: {fileID: 1103357926}
   spawnPoint2: {fileID: 891269733}
-  canvas1: {fileID: 4191446859024872236}
-  canvas2: {fileID: 2913998258329556394}
+  canvas1: {fileID: 2913998258329556394}
+  canvas2: {fileID: 4191446859024872236}
 --- !u!114 &950597170
 MonoBehaviour:
   m_ObjectHideFlags: 0
