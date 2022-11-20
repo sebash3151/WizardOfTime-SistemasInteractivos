@@ -11,7 +11,9 @@ public class PlayerManager : MonoBehaviourPun
     [SerializeField] Transform spawnPoint2;
     [SerializeField] CanvasGroup canvas1;
     [SerializeField] CanvasGroup canvas2;
-
+    [SerializeField] GameObject camera1;
+    [SerializeField] GameObject camera2;
+ 
     private void Awake()
     {
         SpawnAllPlayers();
@@ -28,6 +30,8 @@ public class PlayerManager : MonoBehaviourPun
             canvas2.alpha = 0;
             canvas1.interactable = true;
             canvas2.interactable = false;
+            camera1.SetActive(true);
+            camera2.SetActive(false);
         }
         else
         {
@@ -35,6 +39,8 @@ public class PlayerManager : MonoBehaviourPun
             canvas2.alpha = 1;
             canvas1.interactable = false;
             canvas2.interactable = true;
+            camera1.SetActive(false);
+            camera2.SetActive(true);
         }
 
         object[] initData = new object[1];
