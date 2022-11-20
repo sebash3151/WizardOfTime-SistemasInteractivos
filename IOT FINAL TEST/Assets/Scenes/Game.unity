@@ -29765,12 +29765,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8d9b151fcb7d734298c17a310c7ba58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  magos:
-  - {fileID: 2683257342421938596, guid: 9a7793a0169ccb841b67fc9457cccaab, type: 3}
-  - {fileID: 4191446860170286658, guid: d161d5250addb02429c907226843e2a8, type: 3}
-  spawnPoints:
-  - {fileID: 1103357926}
-  - {fileID: 891269733}
+  mago1: {fileID: 2683257342421938596, guid: 9a7793a0169ccb841b67fc9457cccaab, type: 3}
+  mago2: {fileID: 4191446860170286658, guid: d161d5250addb02429c907226843e2a8, type: 3}
+  spawnPoint1: {fileID: 1103357926}
+  spawnPoint2: {fileID: 891269733}
 --- !u!114 &950597170
 MonoBehaviour:
   m_ObjectHideFlags: 0
