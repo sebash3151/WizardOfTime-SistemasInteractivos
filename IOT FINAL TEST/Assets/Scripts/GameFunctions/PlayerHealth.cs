@@ -44,7 +44,7 @@ public class PlayerHealth : MonoBehaviourPunCallbacks, IPunObservable
         {
             heart1.SetActive(false);
             x1.SetActive(true);
-            Perder();
+            //Perder();
         }
     }
 
