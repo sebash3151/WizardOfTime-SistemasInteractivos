@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class GetTime : MonoBehaviour
+public class GetTime : MonoBehaviourPun, IPunObservable
 {
     [SerializeField] DetectLight actualLight;
     [SerializeField] Color dia;
     [SerializeField] Material diamat;
-    [SerializeField] Color tarde;
-    [SerializeField] Material tarmat;
     [SerializeField] Color noche;
     [SerializeField] Material nochmat;
     [SerializeField] Light directionalLight;
 
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(actualLight.dayTime);
+        }
+        else
+        {
+            actualLight.dayTime = (int)stream.ReceiveNext();
+        }
+    }
 
     void Update()
     {
