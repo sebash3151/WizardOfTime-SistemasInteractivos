@@ -27,7 +27,7 @@ public class DetectLight : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Consensor)
+        /*if (Consensor)
         {
             InputSystem.EnableDevice(LightSensor.current);
             timer += Time.deltaTime;
@@ -106,7 +106,7 @@ public class DetectLight : MonoBehaviour
                 foco.text = "Dia";
                 audio.Play();
             }
-        }      
+        }      */
     }
 
     public void ChangeDay()
