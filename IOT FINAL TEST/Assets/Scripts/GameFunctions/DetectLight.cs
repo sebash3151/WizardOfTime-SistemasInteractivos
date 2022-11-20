@@ -3,28 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using Photon.Pun;
 
-public class DetectLight : MonoBehaviour
+public class DetectLight : MonoBehaviourPun, IPunObservable
 {
     public bool night = false;
     public bool day = false;
-    public bool dawn = false;
+    public int dayTime = 0;
 
     [SerializeField] AudioSource audio;
   
     public void ChangeDay()
     {
-        night = false;
-        day = true;
-        dawn = false;
+        dayTime = 1;
         audio.Play();
     }
 
     public void ChangeNight()
     {
-        night = true;
-        day = false;
-        dawn = false;
+        dayTime = 0;
         audio.Play();
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(dayTime);
+        }
+        else
+        {
+            dayTime = (int)stream.ReceiveNext();
+        }
     }
 }

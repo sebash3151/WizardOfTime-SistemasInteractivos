@@ -16,17 +16,12 @@ public class GetTime : MonoBehaviour
 
     void Update()
     {
-        if (actualLight.day)
+        if (actualLight.dayTime == 1)
         {
             directionalLight.color = dia;
             RenderSettings.skybox = diamat;
         }
-        else if(actualLight.dawn)
-        {
-            directionalLight.color = tarde;
-            RenderSettings.skybox = tarmat;
-        }
-        else if (actualLight.night)
+        else if (actualLight.dayTime == 0)
         {
             directionalLight.color = noche;
             RenderSettings.skybox = nochmat;
