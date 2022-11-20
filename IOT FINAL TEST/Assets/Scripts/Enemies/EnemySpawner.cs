@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class EnemySpawner : MonoBehaviour
+public class EnemySpawner : MonoBehaviourPun
 {
     [SerializeField] Transform[] Spawners;
     [SerializeField] GameObject[] Enemies;
@@ -10,44 +11,9 @@ public class EnemySpawner : MonoBehaviour
     private float timer = 0f;
     public bool active = true;
 
-    void Update()
+    public void Spawn(int onject)
     {
-        
-    }
-
-    private void SpawnEnemy()
-    {
-        Instantiate(Enemies[Random.Range(0, Spawners.Length)], Spawners[Random.Range(0, Enemies.Length)]);   
-    }
-
-    public void Spawn1()
-    {
-        Instantiate(Enemies[0], Spawners[Random.Range(0, Enemies.Length - 1)]);
-    }
-
-    public void Spawn2()
-    {
-        Instantiate(Enemies[1], Spawners[Random.Range(0, Enemies.Length - 1)]);
-    }
-
-    public void Spawn3()
-    {
-        Instantiate(Enemies[2], Spawners[Random.Range(0, Enemies.Length - 1)]);
-    }
-
-    public void Spawn4()
-    {
-        Instantiate(Enemies[3], Spawners[Random.Range(0, Enemies.Length - 1)]);
-    }
-
-    public void Spawn5()
-    {
-        Instantiate(Enemies[4], Spawners[Random.Range(0, Enemies.Length - 1)]);
-    }
-
-    public void Spawn6()
-    {
-        Instantiate(Enemies[5], Spawners[Random.Range(0, Enemies.Length - 1)]);
+        PhotonNetwork.Instantiate(Enemies[onject].name, Spawners[Random.Range(0, Enemies.Length - 1)].position, Quaternion.identity);
     }
 
 }
