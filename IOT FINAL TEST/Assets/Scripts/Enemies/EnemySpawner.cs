@@ -12,16 +12,7 @@ public class EnemySpawner : MonoBehaviour
 
     void Update()
     {
-        if (active)
-        {
-            timer += Time.deltaTime;
-
-            if (timer >= spawnTime)
-            {
-                SpawnEnemy();
-                timer = 0f;
-            }
-        }        
+        
     }
 
     private void SpawnEnemy()
