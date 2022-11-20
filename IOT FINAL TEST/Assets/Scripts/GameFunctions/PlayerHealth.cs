@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : MonoBehaviourPunCallbacks, IPunObservable
 {
-    [SerializeField] int lifes;
+    [SerializeField] int lifes = 3;
     [SerializeField] GameObject heart1;
     [SerializeField] GameObject heart2;
     [SerializeField] GameObject heart3;
@@ -16,6 +17,16 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] AudioSource lostsong;
     [SerializeField] AudioSource auch;
     [SerializeField] EnemySpawner enemies;
+
+    private void Awake()
+    {
+        heart1 = GameObject.Find("hearts1");
+        heart2 = GameObject.Find("hearts (1)");
+        heart3 = GameObject.Find("hearts (2)");
+        x1 = GameObject.Find("hearts (3)");
+        x2 = GameObject.Find("hearts (4)");
+        x3 = GameObject.Find("hearts (5)");
+    }
 
     private void Update()
     {
@@ -57,5 +68,17 @@ public class PlayerHealth : MonoBehaviour
     {
         lifes--;
         auch.Play();
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(lifes);
+        }
+        else
+        {
+            lifes = (int)stream.ReceiveNext(); 
+        }
     }
 }
